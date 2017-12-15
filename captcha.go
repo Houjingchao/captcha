@@ -115,7 +115,7 @@ func initByteList() {
 func generateChars(size int) []byte {
 	str := make([]byte, size)
 	for ; size > 0; size-- {
-		str[size-1] = byteList[r.Uint64()%uint64(len(byteList))]
+		str[size-1] = byteList[r.Uint32()%Uint32(len(byteList))]
 	}
 	return str
 }
